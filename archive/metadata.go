@@ -18,7 +18,7 @@ package archive
 
 import (
 	"encoding/xml"
-	"github.com/getsolus/libeopkg/shared"
+	"github.com/GZGavinZhao/libeopkg/shared"
 )
 
 // Metadata contains all of the information a package can provide to a user

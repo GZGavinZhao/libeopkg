@@ -17,7 +17,7 @@
 package pspec
 
 import (
-	"github.com/getsolus/libeopkg/shared"
+	"github.com/GZGavinZhao/libeopkg/shared"
 )
 
 // Path is the path of a file inside a Package

@@ -20,7 +20,7 @@ import (
 	"archive/tar"
 	"archive/zip"
 	"fmt"
-	"github.com/getsolus/libeopkg/shared"
+	"github.com/GZGavinZhao/libeopkg/shared"
 	"io"
 	"os"
 	"path/filepath"

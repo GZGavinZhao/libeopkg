@@ -21,7 +21,7 @@ import (
 	"crypto/sha1"
 	"encoding/xml"
 	"fmt"
-	"github.com/getsolus/libeopkg/shared"
+	"github.com/GZGavinZhao/libeopkg/shared"
 	"io"
 	"os"
 	"path/filepath"

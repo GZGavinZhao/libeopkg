@@ -24,8 +24,8 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/getsolus/libeopkg/archive"
-	"github.com/getsolus/libeopkg/shared"
+	"github.com/GZGavinZhao/libeopkg/archive"
+	"github.com/GZGavinZhao/libeopkg/shared"
 )
 
 // Index is downloaded on a per-reprosity basis to provide information about the repository's:

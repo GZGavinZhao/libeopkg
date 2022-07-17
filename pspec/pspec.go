@@ -18,7 +18,7 @@ package pspec
 
 import (
 	"encoding/xml"
-	"github.com/getsolus/libeopkg/shared"
+	"github.com/GZGavinZhao/libeopkg/shared"
 )
 
 // PSpec is the format of the new-er `pspec_x86_64.xml` files

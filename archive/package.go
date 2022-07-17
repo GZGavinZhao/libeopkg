@@ -18,7 +18,7 @@ package archive
 
 import (
 	"fmt"
-	"github.com/getsolus/libeopkg/shared"
+	"github.com/GZGavinZhao/libeopkg/shared"
 	"path/filepath"
 	"strings"
 )

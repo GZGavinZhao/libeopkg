@@ -17,7 +17,7 @@
 package index
 
 import (
-	"github.com/getsolus/libeopkg/shared"
+	"github.com/GZGavinZhao/libeopkg/shared"
 )
 
 const (
