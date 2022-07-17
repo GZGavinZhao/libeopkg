@@ -1,3 +1,3 @@
-module github.com/getsolus/libeopkg
+module github.com/GZGavinZhao/libeopkg
 
 go 1.12
