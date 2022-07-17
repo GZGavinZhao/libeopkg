@@ -20,10 +20,12 @@ import (
 	"crypto/sha1"
 	"encoding/xml"
 	"fmt"
-	"github.com/getsolus/libeopkg/shared"
 	"io"
 	"os"
 	"path/filepath"
+
+	"github.com/getsolus/libeopkg/archive"
+	"github.com/getsolus/libeopkg/shared"
 )
 
 // Index is downloaded on a per-reprosity basis to provide information about the repository's:
@@ -32,7 +34,7 @@ import (
 type Index struct {
 	XMLName      xml.Name `xml:"PISI"`
 	Distribution Distribution
-	Packages     []Package   `xml:"Package"`
+	Packages     []archive.Package   `xml:"Package"`
 	Components   []Component `xml:"Component"`
 	Groups       []Group     `xml:"Group"`
 }
