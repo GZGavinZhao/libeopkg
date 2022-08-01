@@ -39,6 +39,7 @@ type Package struct {
 	Replaces            *[]string            `xml:"Replaces>Package,omitempty"`
 	Provides            shared.Provides      `xml:"Provides,omitempty"`
 	History             []shared.Update      `xml:"History>Update"`
+	DeltaPackages       []shared.Delta       `xml:"DeltaPackages>Delta"`
 	// Binary details
 	BuildHost           string
 	Distribution        string
