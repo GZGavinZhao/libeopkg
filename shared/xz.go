@@ -17,14 +17,60 @@
 package shared
 
 import (
+	"bufio"
+	"io/ioutil"
+	"os"
 	"os/exec"
+
+	"github.com/ulikunitz/xz"
 )
 
-// XzFile is a simple wrapper around the xz utility to compress the input
-// file. This will be performed in place and leave a ".xz" suffixed file in
-// place
-// Keep original determines whether we'll keep the original file
+// XzFile compress the file given and leave a ".xz" suffixed file in place.
+//
+// keepOriginal determins whether we'll keep the original file.
 func XzFile(inputPath string, keepOriginal bool) error {
+	input, err := os.Open(inputPath)
+	if err != nil {
+		return err
+	}
+
+	r := bufio.NewReader(input)
+
+	data, err := ioutil.ReadAll(r)
+
+	output, err := os.Create(inputPath + ".xz")
+	if err != nil {
+		return err
+	}
+
+	w, err := xz.NewWriter(output)
+	if err != nil {
+		return err
+	}
+
+	w.Write(data)
+
+	err = w.Close()
+	if err != nil {
+		return err
+	}
+
+	if !keepOriginal {
+		err := os.Remove(inputPath)
+		if err != nil {
+			return err
+		}
+	}
+
+	return nil
+}
+
+// XzFileCmd is a simple wrapper around the xz utility to compress the input
+// file. This will be performed in place and leave a ".xz" suffixed file in
+// place.
+//
+// Keep original determines whether we'll keep the original file.
+func XzFileCmd(inputPath string, keepOriginal bool) error {
 	cmd := []string{
 		"xz",
 		"-6",
